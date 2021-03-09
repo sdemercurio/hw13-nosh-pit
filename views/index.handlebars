@@ -2,37 +2,31 @@
 
 <h2>Grab A Burg And Nosh</h2>
 
-<ul>
-  {{#each burgers}}
-  {{#unless noshed}}
-  {{> burgers/burger-block noshed=true}}
-  {{/unless}}
-  {{/each}}
-</ul>
+<ol>
+    {{#each burgers}}
+    {{#unless noshed}}
+    {{> burgers/burger-block noshed=true}}
+    {{/unless}}
+    {{/each}}
+  </ol>
 
-<h2>Someone Was Hungry</h2>
-
-<ul>
-  {{#each burgers}}
-  {{#if noshed}}
-  {{> burgers/burger-block noshed=false}}
-  {{/if}}
-  {{/each}}
-</ul>
+  <h2>Waiting to be noshed</h2>
+  <ol>
+    <div class="">
+      {{#each burgers}}
+      {{#if noshed}}
+      {{> burgers/burger-block noshed=false}}
+      {{/if}}
+      {{/each}}
+  </ol>
 
 <h2>Add a burger</h2>
 <form id="create-form">
 
-  <div class="form-group">
-    <label for="burg">Burger Name:</label>
-    <input type="text" id="burg" name="burger_name">
-  </div>
+    <div class="form-group">
+      <label for="ca">Burger Name:</label>
+      <input type="text" id="ca" name="name">
+    </div>
 
-  <div class="form-group">
-    <label for="noshed">Noshed?</label><br>
-    <input type="radio" name="noshed" value="1" id="noshed" checked > Noshed!<br>
-    <input type="radio" name="noshed" value="1" id="notNoshed" Waiting To Be Noshed><br>
-  </div>
-
-  <button type="submit">Add burger</button>
-</form>
+    <button id="add-button" type="submit"> Add Burger </button>
+  </form>
