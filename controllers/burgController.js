@@ -16,14 +16,14 @@ router.get('/', (req, res) => {
   });
 });
 
-router.post('burgs', (req, res) => {
-  burger.create(['/burger_name', 'noshed'], [req.body.burger_name, req.body.noshed], (result) => {
+router.post('/api/burgs', (req, res) => {
+  burger.create(['burger_name', 'noshed'], [req.body.burger_name, req.body.noshed], (result) => {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
 
-router.put('/burgs/:id', (req, res) => {
+router.put('/api/burgs/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
   console.log('condition', condition);
@@ -43,7 +43,7 @@ router.put('/burgs/:id', (req, res) => {
   );
 });
 
-router.delete('/burgs/:id', (req, res) => {
+router.delete('/api/burgs/:id', (req, res) => {
   const condition = `id = ${req.params.id}`;
 
   burger.delete(condition, (result) => {
