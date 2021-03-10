@@ -1,49 +1,51 @@
 <h3>Enter the</h3>
 <h1>Nosh Pit!</h1>
 
+<div class="spacer"></div>
 
 <div class="row">
+  <div class="col-md-1"></div>
+  <div class="col-md-5">
+    <div class="row">
+      <h2 id="waiting">Waiting To Be Noshed</h2>
+    </div>
+
+    <div class="row" id="left">
+      <ol>
+        {{#each burgers}}
+        {{#unless noshed}}
+        {{> burgers/burger-block noshed=true}}
+        {{/unless}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+
+  <div class="col-md-5">
+    <div class="row">
+      <h2 id="noshed">Noshed!</h2>
+    </div>
+    <div class="row" id="right">
+      <ol>
+        {{#each burgers}}
+        {{#if noshed}}
+        {{> burgers/burger-block noshed=false}}
+        {{/if}}
+        {{/each}}
+      </ol>
+    </div>
+  </div>
+</div>
 <div class="col-md-1"></div>
-<div class="col-md-5" >
-<div class="row">
-<h2 id="waiting">Waiting To Be Noshed</h2>
-</div>
+ <img id="burger-ill" src="assets/img/burger.PNG" alt="burger illustration">
 
-<div class="row" id="left">
-<ol>
-    {{#each burgers}}
-    {{#unless noshed}}
-    {{> burgers/burger-block noshed=true}}
-    {{/unless}}
-    {{/each}}
-  </ol>
-</div>
-</div>
-
-<div class="col-md-5" >
-<div class="row">
-  <h2 id="noshed">Noshed!</h2>
-</div>
-<div class="row" id="right">
-  <ol>
-      {{#each burgers}}
-      {{#if noshed}}
-      {{> burgers/burger-block noshed=false}}
-      {{/if}}
-      {{/each}}
-  </ol>
-</div>
-</div>
-</div>
+ <div class="row flex-container" id="add"></div>
 <div class="col-md-1"></div>
-
-<div class="col-md-2"></div>
-<div class="col-md-8">
-<div class="row" id="add">
-<div class="row" id="add-one">
-<h2>What dost though wish to nosh?</h2>
-</div>
-<form id="create-form">
+<div class="col-md-5">
+  <div class="row" id="add-one">
+    <h2 id="wish">What dost though wish to nosh?</h2>
+  </div>
+  <form id="create-form">
 
     <div class="form-group">
       <label for="ca" id="newburg-name">Burger Name:</label>
@@ -54,6 +56,9 @@
   </form>
 </div>
 </div>
-<div class="col-md-2"></div>
+<div class="col-md-5">
+</div>
+<div class="col-md-1"></div>
+</div>
 
 <div class="spacer"></div>

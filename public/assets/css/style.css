@@ -1,6 +1,5 @@
 body {
-    
-    background-image: url('../img/distress_burst_bg.jpg');
+    background-color: rgb(61, 58, 58);
 }
 
 h1 {
@@ -11,6 +10,7 @@ h1 {
     text-align: center;
     margin: auto;
     color: white;
+    font-size: 6rem;
 }
 
 h3, h2 {
@@ -20,6 +20,7 @@ h3, h2 {
     text-align: center;
     margin: 40px 0 0 0;
     color: white;
+    font-size: 3rem;
 }
 
 #left, #right {
@@ -58,11 +59,11 @@ h3, h2 {
     margin: auto;
 }
 
-button {
+#burg-button {
     margin-left: 2.5rem;
     background-color: rgb(88, 24, 12);
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     border-radius: 1rem;
 }
 
@@ -72,6 +73,18 @@ button {
     font-weight: 400;
     font-size: 1.5rem;
     font-style: normal;
+}
+
+#wish {
+    font-family: printf, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin: 40px 0 0 0;
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
 #add  {
@@ -85,6 +98,30 @@ button {
 
 }
 
+#add-button {
+        background-color: rgb(88, 24, 12);
+        color: white;
+        font-size: 1.5rem;
+        border-radius: 1rem;
+}
+
 .spacer {
     height: 3rem;
+}
+
+form {
+    text-align: center;
+    margin-left: 3rem;
+    float: left;
+}
+
+#burger-ill {
+    margin:auto;
+    width: 60%;
+    float: right;
+    z-index: -1;
+}
+
+.flex-container {
+    display: flex;
 }
