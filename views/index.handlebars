@@ -1,7 +1,14 @@
+<h3>Enter the</h3>
 <h1>Nosh Pit!</h1>
 
-<h2>Grab A Burg And Nosh</h2>
 
+<div class="row">
+<div class="col-md-6" id="left">
+<div class="row">
+<h2 id="waiting">Waiting To Be Noshed</h2>
+</div>
+
+<div class="row">
 <ol>
     {{#each burgers}}
     {{#unless noshed}}
@@ -9,24 +16,34 @@
     {{/unless}}
     {{/each}}
   </ol>
+</div>
+</div>
 
-  <h2>Waiting to be noshed</h2>
+<div class="col-md-6" id="right">
+<div class="row">
+  <h2 id="noshed">Noshed!</h2>
+</div>
+<div class="row">
   <ol>
-    <div class="">
       {{#each burgers}}
       {{#if noshed}}
       {{> burgers/burger-block noshed=false}}
       {{/if}}
       {{/each}}
   </ol>
+</div>
+</div>
+</div>
 
+<div class="row" id="add-one">
 <h2>Add a burger</h2>
 <form id="create-form">
 
     <div class="form-group">
-      <label for="ca">Burger Name:</label>
+      <label for="ca" id="newburg-name">Burger Name:</label>
       <input type="text" id="ca" name="name">
     </div>
 
     <button id="add-button" type="submit"> Add Burger </button>
   </form>
+</div>
