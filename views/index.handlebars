@@ -3,12 +3,13 @@
 
 
 <div class="row">
-<div class="col-md-6" id="left">
+<div class="col-md-1"></div>
+<div class="col-md-5" >
 <div class="row">
 <h2 id="waiting">Waiting To Be Noshed</h2>
 </div>
 
-<div class="row">
+<div class="row" id="left">
 <ol>
     {{#each burgers}}
     {{#unless noshed}}
@@ -19,11 +20,11 @@
 </div>
 </div>
 
-<div class="col-md-6" id="right">
+<div class="col-md-5" >
 <div class="row">
   <h2 id="noshed">Noshed!</h2>
 </div>
-<div class="row">
+<div class="row" id="right">
   <ol>
       {{#each burgers}}
       {{#if noshed}}
@@ -34,9 +35,14 @@
 </div>
 </div>
 </div>
+<div class="col-md-1"></div>
 
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="row" id="add">
 <div class="row" id="add-one">
-<h2>Add a burger</h2>
+<h2>What dost though wish to nosh?</h2>
+</div>
 <form id="create-form">
 
     <div class="form-group">
@@ -44,6 +50,10 @@
       <input type="text" id="ca" name="name">
     </div>
 
-    <button id="add-button" type="submit"> Add Burger </button>
+    <button id="add-button" type="submit">Add It</button>
   </form>
 </div>
+</div>
+<div class="col-md-2"></div>
+
+<div class="spacer"></div>
