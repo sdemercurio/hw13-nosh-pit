@@ -1,4 +1,5 @@
 # hw13-nosh-pit
 
-![nosh pit](assets/img/nosh-pi.PNG)
+![nosh pit](public/assets/img/nosh-pit.PNG)
+\
  Burger logger with MySQL, Node, Express, Handlebars and ORM.
