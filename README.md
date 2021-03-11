@@ -30,6 +30,40 @@ When a user submits a burger's name, the app didsplays the burger on the left si
 
 ####Deployed on: 
 [Heroku](https://afternoon-everglades-89065.herokuapp.com/)
-* please note this was not successfully deployed due to issues that could not be resolved by fellow students or my instructor.
+* please note this was not successfully deployed due to issues that could not be resolved by fellow students or my instructor. 
+There is a hidden issue with my syntax somewhere in the following snippet of code.
+
+``` javascript
+const orm = {
+  selectAll(tableInput, cb) {
+    const queryString = `SELECT * FROM ${tableInput};`;
+    connection.query(queryString, (err, result) => {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+    });
+  },
+  create(table, cols, vals, cb) {
+    let queryString = `INSERT INTO ${table}`;
+
+    queryString += ' (';
+    queryString += cols.toString();
+    queryString += ') ';
+    queryString += 'VALUES (';
+    queryString += printQuestionMarks(vals.length);
+    queryString += ') ';
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, (err, result) => {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+```
 
 Link to [GitHub Repo](https://github.com/sdemercurio/hw13-nosh-pit.git)
