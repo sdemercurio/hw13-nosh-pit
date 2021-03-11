@@ -29,4 +29,7 @@ When a user submits a burger's name, the app didsplays the burger on the left si
 ![nosh pit](public/assets/img/screen-shot.PNG)
 
 ####Deployed on: 
-Heroku
+[Heroku](https://afternoon-everglades-89065.herokuapp.com/)
+* please note this was not successfully deployed due to issues that could not be resolved.
+
+Link to [GitHub Repo](https://github.com/sdemercurio/hw13-nosh-pit.git)
